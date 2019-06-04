@@ -1,11 +1,5 @@
 language: node_js
 node_js: "8"
-addons:
-  apt:
-    packages:
-      - mysql-server-5.7
-      - mysql-client-core-5.7
-      - mysql-client-5.7
 branches:
   only:
   - master
@@ -13,4 +7,4 @@ cache:
   directories:
     - node_modules
 before_install:
-  - mysql -e 'CREATE DATABASE testdb;'
+  - mysql -e "CREATE DATABASE testdb;"
