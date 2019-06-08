@@ -1,21 +1,28 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "annies11",
+=======
+    "password": "root",
+>>>>>>> ff1f146ba3ea7b5fd1b5144d5e5a9014ad420540
     "database": "meme_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "annies11",
+    "password": "",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }

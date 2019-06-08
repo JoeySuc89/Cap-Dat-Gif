@@ -6,7 +6,7 @@ var db = require("../models");
 // Telling passport we wan tot use Local Strategy. In other words tp log in with username/email and password
 passport.use(
   new LocalStrategy(
-    // The user will sign in using an email, rather thab a "username"
+    // The user will sign in using an email, rather than a "username"
     {
       usernameField: "email"
     },
