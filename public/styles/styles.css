@@ -1,5 +1,5 @@
 body {
-  background-image: url('/images/try.png');
+  background-image: url('/images/A7FzeeC.jpg');
   background-size: cover;
 }
 /* Add a black background color to the top navigation */
@@ -63,4 +63,9 @@ body {
     left: 0;
     transform: none;
   }
+}
+
+body {
+  background-color: black;
+  color: white;
 }
