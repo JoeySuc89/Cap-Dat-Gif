@@ -1,17 +1,22 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
+    "password": "annies11",
+=======
     "password": "root",
+>>>>>>> ff1f146ba3ea7b5fd1b5144d5e5a9014ad420540
     "database": "meme_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "root",
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": "",
+    "database": "testdb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
   },
   "production": {
     "username": "root",
