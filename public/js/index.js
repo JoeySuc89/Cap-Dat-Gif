@@ -27,6 +27,14 @@ var API = {
       url: "api/examples/" + id,
       type: "DELETE"
     });
+  },
+  Memelike: function(id){
+    return $.ajax({
+      url: "api/Memelike" + id,
+      type: "PUT"
+    }).then(function(res){
+      console.log(res);
+    });
   }
 };
 
@@ -97,3 +105,8 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+$(".upvote").on("click", function(){
+  var memeId = $(this).attr("data-id"); 
+  API.Memelike(memeId); 
+})
