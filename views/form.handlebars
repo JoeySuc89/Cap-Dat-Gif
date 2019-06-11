@@ -1,6 +1,16 @@
+<div class='container' id='meme-generator'>
+<div class='col-sm-12'>
+  <h2>Meme Generator</h2>
 <div id='form'>
-  <form id='meme-form'>
-    <input type='text' name='caption-input'>
+  <input type='text' name='gfycat-search' placeholder='Search gfycat'>
+  <button class='btn btn-submit'>Search</button>
+  <div id='gfycat-div'>
+    Gifs from gfycat go here
+  </div>
+  <form action="/api/memes" method="POST" id='meme-form'>
+    <input type='text' name='caption' placeholder='Caption'>
     <button type='submit' class='btn btn-submit'>Create Meme!</button>
   </form>
+</div>
+</div>
 </div>
