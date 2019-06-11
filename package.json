@@ -30,5 +30,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "mocha": "^6.1.4",
     "prettier": "^1.17.1"
-  }
+  },
+  "repository": "git@github.com:JoeySuc89/Project-Two.git",
+  "author": "rjshoemaker55 <rjshoemaker55@gmail.com>"
 }
