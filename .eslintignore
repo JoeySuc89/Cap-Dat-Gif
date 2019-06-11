@@ -2,3 +2,5 @@ models/index.js
 node_modules
 20190607005033-create-memes.js
 Meme.js
+models/index.js
+public/js/index.js
