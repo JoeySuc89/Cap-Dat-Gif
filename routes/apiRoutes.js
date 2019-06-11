@@ -38,10 +38,13 @@ module.exports = function(app) {
 
   // eslint-disable-next-line no-unused-vars
   app.post("/api/Memedislike", function(req, res) {
-    db.Meme.findByPk(1)
+    console.log(req.params.id);
+    db.Meme.findByPk(req.params.id)
       .then(function(Meme) {
         return Meme.increment(["dislikes"], { by: 1 });
       })
-      .then();
+      .then(function(dbMemeDislike) {
+        res.json(dbMemeDislike);
+      });
   });
 };
