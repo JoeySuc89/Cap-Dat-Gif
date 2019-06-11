@@ -8,6 +8,10 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/form", function(req, res) {
+    res.render("form");
+  });
+
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
@@ -38,10 +42,13 @@ module.exports = function(app) {
 
   // eslint-disable-next-line no-unused-vars
   app.post("/api/Memedislike", function(req, res) {
-    db.Meme.findByPk(1)
+    console.log(req.params.id);
+    db.Meme.findByPk(req.params.id)
       .then(function(Meme) {
         return Meme.increment(["dislikes"], { by: 1 });
       })
-      .then();
+      .then(function(dbMemeDislike) {
+        res.json(dbMemeDislike);
+      });
   });
 };

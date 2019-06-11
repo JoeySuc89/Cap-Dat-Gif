@@ -111,3 +111,8 @@ $(".upvote").on("click", function(){
   var memeId = $(this).attr("data-id");
   API.Memelike(memeId);
 })
+
+$(".downvote").on("click", function(){
+  var memeId = $(this).attr("data-id");
+  API.Memelike(memeId);
+})
