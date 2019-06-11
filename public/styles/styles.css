@@ -1,5 +1,5 @@
 body {
-  background-image: url('/images/A7FzeeC.jpg');
+  background-image: url('/images/background\ image.jpg');
   background-size: cover;
 }
 /* Add a black background color to the top navigation */
@@ -12,7 +12,7 @@ body {
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #ffffff;
+  color: #ffe602;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -27,9 +27,10 @@ body {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 208, 0);
   color: rgb(0, 0, 0);
   border-radius: 20px;
+  border: 2px solid black;
 }
 
 /* Centered section inside the top navigation */
