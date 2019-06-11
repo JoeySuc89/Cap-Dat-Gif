@@ -4,6 +4,7 @@ var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
@@ -107,6 +108,6 @@ $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 $(".upvote").on("click", function(){
-  var memeId = $(this).attr("data-id"); 
-  API.Memelike(memeId); 
+  var memeId = $(this).attr("data-id");
+  API.Memelike(memeId);
 })
