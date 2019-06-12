@@ -29,10 +29,11 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
 
-    db.examples.selectAll(function(data) {
-      console.log("Select all funciton hit");
+    db.Example.findAll({}).then(function(data) {
+      console.log("Findall all funciton hit");
+      console.log(data);
       res.render("index", {
-        examples: data.text
+        examples: data
       });
     });
   });
