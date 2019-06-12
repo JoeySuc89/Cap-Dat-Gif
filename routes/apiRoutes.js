@@ -12,6 +12,20 @@ module.exports = function(app) {
     res.render("form");
   });
 
+  app.post("/api/creatememe", function(req, res) {
+    console.log("made it to creatememe post request");
+    console.log(req.body);
+    db.Meme.create({
+      imageurl: req.body.imageurl,
+      caption: req.body.caption
+    }).then(function(newMeme) {
+      console.log(
+        "New meme caption: " + newMeme.caption + " and url: " + newMeme.imageurl
+      );
+      res.redirect("/");
+    });
+  });
+
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
@@ -41,14 +55,14 @@ module.exports = function(app) {
   //downvote calling the api for meme getting the unique id then incrementiing "dislikes" by 1
 
   // eslint-disable-next-line no-unused-vars
-  app.post("/api/Memedislike", function(req, res) {
+  app.put("/api/Memedislike/:id", function(req, res) {
     console.log(req.params.id);
     db.Meme.findByPk(req.params.id)
       .then(function(Meme) {
         return Meme.increment(["dislikes"], { by: 1 });
       })
-      .then(function(dbMemeDislike) {
-        res.json(dbMemeDislike);
+      .then(function(dbMemedislike) {
+        res.json(dbMemedislike);
       });
   });
 };

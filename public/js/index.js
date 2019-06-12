@@ -36,6 +36,14 @@ var API = {
     }).then(function(res){
       console.log(res);
     });
+  },
+  Memedislike: function(id){
+    return $.ajax({
+      url: "api/Memedislike" + id,
+      type: "PUT"
+    }).then(function(res){
+      console.log(res);
+    });
   }
 };
 
@@ -114,5 +122,5 @@ $(".upvote").on("click", function(){
 
 $(".downvote").on("click", function(){
   var memeId = $(this).attr("data-id");
-  API.Memelike(memeId);
+  API.Memedislike(memeId);
 })

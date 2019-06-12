@@ -6,12 +6,34 @@
     <a href="http://localhost:3000/login">Login</a>
     <a href="http://localhost:3000/">Home</a>
   </div>
-  <div class="upvote" data-id = "1">
-  <i class="fa fa-arrow-up"></i></div>
 
-  <div class="downvote" data-id = "2">
-  <i class="fa fa-arrow-down"></i></div>
+    </div>
+
+
+  {{!-- <div class="upvote" data-id = "1">
+  <i class="fa fa-arrow-up"></i></div> --}}
+
+  {{!-- <div class="downvote" data-id = "2">
+  <i class="fa fa-arrow-down"></i></div> --}}
+
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-12'>
+         <div id='memes-display'>
+    {{#each memes}}
+      <div class='meme-divs'>
+        <img class='meme-gifs' src={{imageurl}}>
+        <p class='meme-captions'>{{caption}}</p>
+      </div>
+    {{/each}}
+  </div>
 </div>
+
+      </div>
+    </div>
+
+
+
 
 
 

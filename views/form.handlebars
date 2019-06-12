@@ -1,6 +1,37 @@
-<div id='form'>
-  <form id='meme-form'>
-    <input type='text' name='caption-input'>
-    <button type='submit' class='btn btn-submit'>Create Meme!</button>
+<div class='container' id='meme-generator'>
+<div class='col-sm-12'>
+  <h2>Meme Generator</h2>
+<form id='search-form'>
+  <input type='text' id='gfycat-search' name='gfycat-search' placeholder='Search gfycat' >
+  <button id="gfycat-search-btn" class='btn btn-submit'>Search</button>
+
+  <div id='gfycat-div'>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card-columns">
+        {{#each results}}
+          <div class="card">
+            <img class="card-img-top gif-result" src={{this}} />
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <form action="/api/creatememe" method="POST" id='meme-form'>
+    <input id="img-val" name='imageurl' />
+    <input type='text' name='caption' placeholder='Caption' />
+    <input id='create-meme' type='submit' />
   </form>
 </div>
+</div>
+</div>
+
+    <script src="/js/search-result.js"></script>
