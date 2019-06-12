@@ -8,7 +8,7 @@
   },
   "test": {
     "username": "root",
-    "password": "titanic11",
+    "password": "root",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
@@ -16,7 +16,7 @@
   },
   "production": {
     "username": "root",
-    "password": null,
+    "password": "1111",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
