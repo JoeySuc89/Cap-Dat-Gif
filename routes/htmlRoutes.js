@@ -27,7 +27,13 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
-    res.render("index");
+
+    db.examples.selectAll(function(data) {
+      console.log("Select all funciton hit");
+      res.render("index", {
+        examples: data.text
+      });
+    });
   });
   app.get("/generatememe", function(req, res) {
     // If the user already has an account send them to the members page

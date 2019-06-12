@@ -12,6 +12,15 @@ module.exports = function(app) {
     res.render("form");
   });
 
+  app.post("/api/memes", function(req, res) {
+    console.log(req.body);
+    res.send("Made it to /api/memes post request");
+    db.examples.insertOne(req.body.caption, "test", function() {
+      console.log("Insert one function hit");
+      res.redirect("/");
+    });
+  });
+
   // Create a new example
   app.post("/api/examples", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
