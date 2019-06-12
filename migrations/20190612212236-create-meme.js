@@ -1,29 +1,17 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("memes", {
+    return queryInterface.createTable('Memes', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      username: {
+      caption: {
         type: Sequelize.STRING
       },
-      url: {
-        type: Sequelize.STRING
-      },
-      likes: {
-        type: Sequelize.INTEGER
-      },
-      dislikes: {
-        type: Sequelize.INTEGER
-      },
-      memeText: {
-        type: Sequelize.STRING
-      },
-      commentText: {
+      imageurl: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -37,6 +25,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("memes");
+    return queryInterface.dropTable('Memes');
   }
 };

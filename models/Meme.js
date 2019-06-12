@@ -1,15 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const memes = sequelize.define('memes', {
-    username: DataTypes.STRING,
-    url: DataTypes.STRING,
-    likes: DataTypes.INTEGER,
-    dislikes: DataTypes.INTEGER,
-    memeText: DataTypes.STRING,
-    commentText: DataTypes.STRING
+  const Meme = sequelize.define('Meme', {
+    caption: DataTypes.STRING,
+    imageurl: DataTypes.STRING
   }, {});
-  memes.associate = function(models) {
+  Meme.associate = function(models) {
     // associations can be defined here
   };
-  return memes;
+  return Meme;
 };
