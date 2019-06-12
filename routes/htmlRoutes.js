@@ -28,7 +28,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
 
-    db.examples.selectAll(function(data) {
+    db.Example.findAll(function(data) {
       console.log("Select all funciton hit");
       res.render("index", {
         examples: data.text
