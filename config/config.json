@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "meme_db",
+    "database": "testdb",
     "host": "localhost",
     "dialect": "mysql"
   },
