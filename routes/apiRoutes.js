@@ -12,11 +12,16 @@ module.exports = function(app) {
     res.render("form");
   });
 
-  app.post("/api/memes", function(req, res) {
+  app.post("/api/creatememe", function(req, res) {
+    console.log("made it to creatememe post request");
     console.log(req.body);
-    res.send("Made it to /api/memes post request");
-    db.Example.insertOne(req.body.caption, "test", function() {
-      console.log("Insert one function hit");
+    db.Meme.create({
+      imageurl: req.body.imageurl,
+      caption: req.body.caption
+    }).then(function(newMeme) {
+      console.log(
+        "New meme caption: " + newMeme.caption + " and url: " + newMeme.imageurl
+      );
       res.redirect("/");
     });
   });

@@ -29,11 +29,11 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
 
-    db.Example.findAll({}).then(function(data) {
+    db.Meme.findAll({}).then(function(data) {
       console.log("Findall all funciton hit");
       console.log(data);
       res.render("index", {
-        examples: data
+        memes: data
       });
     });
   });
@@ -66,15 +66,16 @@ module.exports = function(app) {
   });
 
   app.get("/memes/:search", function(req, res) {
+    console.log("Hit get search funciton");
     axios
       .get(
-        "https://api.gfycat.com/v1/gfycats/search?search_text=${req.params.search}"
+        "https://api.gfycat.com/v1/gfycats/search?search_text=" + req.params.search
       )
       .then(function(response) {
         var gifs = response.data.gfycats.map(function(gfycat) {
           return gfycat.gifUrl;
         });
-        res.render("searchResults", { results: gifs });
+        res.render("form", { results: gifs });
       });
   });
 
