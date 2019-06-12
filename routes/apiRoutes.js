@@ -15,7 +15,7 @@ module.exports = function(app) {
   app.post("/api/memes", function(req, res) {
     console.log(req.body);
     res.send("Made it to /api/memes post request");
-    db.examples.insertOne(req.body.caption, "test", function() {
+    db.Example.insertOne(req.body.caption, "test", function() {
       console.log("Insert one function hit");
       res.redirect("/");
     });

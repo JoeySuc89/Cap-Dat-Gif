@@ -1,5 +1,6 @@
 var db = require("../models");
 var path = require("path");
+var axios = require("axios");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
@@ -28,10 +29,11 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
 
-    db.Example.findAll(function(data) {
-      console.log("Select all funciton hit");
+    db.Example.findAll({}).then(function(data) {
+      console.log("Findall all funciton hit");
+      console.log(data);
       res.render("index", {
-        examples: data.text
+        examples: data
       });
     });
   });
@@ -61,6 +63,19 @@ module.exports = function(app) {
         example: dbExample
       });
     });
+  });
+
+  app.get("/memes/:search", function(req, res) {
+    axios
+      .get(
+        "https://api.gfycat.com/v1/gfycats/search?search_text=${req.params.search}"
+      )
+      .then(function(response) {
+        var gifs = response.data.gfycats.map(function(gfycat) {
+          return gfycat.gifUrl;
+        });
+        res.render("searchResults", { results: gifs });
+      });
   });
 
   // Render 404 page for any unmatched routes
