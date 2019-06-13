@@ -4,20 +4,6 @@ var axios = require("axios");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
-  // Load index page
-  // app.get("/", function(req, res) {
-  //   if (true) {
-  //     db.Example.findAll({}).then(function(dbExamples) {
-  //       res.render("index", {
-  //         msg: "Welcome!",
-  //         examples: dbExamples
-  //       });
-  //     });
-  //   } else {
-  //     res.sendFile(path.join(__dirname, "../public/signup.html"));
-  //   }
-  // });
-
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
@@ -30,43 +16,35 @@ module.exports = function(app) {
     // If the user already has an account send them to the members page
 
     db.Meme.findAll({}).then(function(data) {
-      console.log("Findall all funciton hit");
-      console.log(data);
       res.render("index", {
         memes: data
       });
     });
   });
-  app.get("/generatememe", function(req, res) {
-    // If the user already has an account send them to the members page
-    res.render("meme");
-  });
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
+  // Render form.handlebars when /form is hit
+  app.get("/form", function(req, res) {
+    res.render("form");
+  });
+
+  // Render login.handlebars when /login is hit
   app.get("/login", function(req, res) {
     res.render("login");
   });
+
+  // Render register.handlebars when /register is hit
   app.get("/register", function(req, res) {
     res.render("register");
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
-  });
-
+  // Search gfycat after user hits search button, render gifs
   app.get("/memes/:search", function(req, res) {
-    console.log("Hit get search funciton");
     axios
       .get(
         "https://api.gfycat.com/v1/gfycats/search?search_text=" + req.params.search
@@ -78,15 +56,16 @@ module.exports = function(app) {
         res.render("form", { results: gifs });
       });
   });
-  app.get("/meme/:memeId", function(req,res){
-    db.Meme.findOne({id:req.params.memeId}).then(function(data) {
-      console.log("FindOne function hit");
-      console.log(data);
-      res.render("meme", {
-        meme: data
-      });
-    });
-  })
+
+  // app.get("/meme/:memeId", function(req,res){
+  //   db.Meme.findOne({id:req.params.memeId}).then(function(data) {
+  //     console.log("FindOne function hit");
+  //     console.log(data);
+  //     res.render("meme", {
+  //       meme: data
+  //     });
+  //   });
+  // });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
