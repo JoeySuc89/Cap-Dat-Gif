@@ -1,38 +1,39 @@
 body {
-  background-image: url('/images/logincat.jpeg');
+  background-image: url('/images/background\ image.jpg');
   background-size: cover;
+  background-repeat:no-repeat;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
   position: relative;
   overflow: hidden;
-  border-radius: 50px;
+  height: 85px;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #030303;
+  color: #ffe602;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
-  background-color: #e4fd05;
+  font-size: 17px;
 }
 
 /* Change the color of links on hover */
 .topnav-right a:hover {
-  background-image: url('/images/trump2.jpg');
-  background-size: cover;
-  color: rgb(255, 238, 0);
+  background-color: rgb(255, 196, 0);
+  color: black;
+  border: solid black
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: rgb(214, 252, 0);
+  background-color: rgb(255, 208, 0);
   color: rgb(0, 0, 0);
-  border-radius: 50px;
+  border-radius: 20px;
+  border: 2px solid black;
 }
 
 /* Centered section inside the top navigation */
@@ -44,16 +45,15 @@ body {
   transform: translate(-50%, -50%);
 }
 .topnav-centered a:hover {
-  color: rgb(255, 255, 255);
-  background-color: gray;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 217, 0);
+  border: black solid 5px;
 }
 
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right;
-}
-.topnav a {
-  border-radius: 100px;
+  margin-top: 5px;
 }
 
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
@@ -78,6 +78,8 @@ form {
   margin: auto;
   text-align: center;
   margin-top: 3%;
+  margin-top: 10%;
+  background: rgba(0, 0, 0, 0.678);
 }
 * {box-sizing: border-box}
 
@@ -89,6 +91,12 @@ form {
   display: inline-block;
   border: none;
   background: #f1f1f1;
+}
+#names {
+  font-style: oblique;
+  color: gold;
+  font-size: 50px;
+
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -141,23 +149,40 @@ button:hover {
   display: table;
 }
 .buttonregister {
-  -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    padding: 14px 20px;
-    background-color: #f44336
+  font: bold 15px Arial;
+  text-decoration: none;
+  background-color: rgb(255, 208, 0);
+  color: black;
+  padding: 5px 5px 5px 5px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 }
 .signupbtn {
   width: 50%;
-  position: absolute;
   left: 0;
   right: 0;
   margin: auto;
-  top: 500px;
+  margin-left: 25%;
 }
-
+button {
+  background: gold;
+  color: black;
+  border: solid black 2px;
+}
+#signup {
+  color: gold;
+}
+#text {
+  color: gold;
+}
+label {
+  color: gold;
+}
+.loginstyle {
+  background: #ffe602;
+}
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
