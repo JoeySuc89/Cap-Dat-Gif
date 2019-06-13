@@ -2,76 +2,64 @@ body {
   background-image: url('/images/background\ image.jpg');
   background-size: cover;
 }
-/* Add a black background color to the top navigation */
-.topnav {
-  position: relative;
-  overflow: hidden;
-  height: 85px;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #ffe602;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: rgb(255, 196, 0);
-  color: black;
-  border: solid black
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: rgb(255, 208, 0);
-  color: rgb(0, 0, 0);
-  border-radius: 20px;
-  border: 2px solid black;
-}
-
-/* Centered section inside the top navigation */
-.topnav-centered a {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.topnav-centered a:hover {
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 217, 0);
-  border: black solid 5px;
-}
-
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
-  margin-top: 10px;
-}
-
-/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav-right {
-    float: none;
-    display: block;
-  }
-
-  .topnav-centered a {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-  }
-}
 
 body {
   background-color: black;
   color: white;
+  padding-bottom: 25px;
+}
+
+.fas {
+  color: black;
+}
+
+#create-button {
+  font-size: 40px;
+  font-weight:bold;
+  color: purple;
+  background: lightpink;
+  padding: 8px 20px 8px 20px;
+  border: black solid 1px;
+  border-radius: 10px;
+  font-family: "Monoton";
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+#gfycat-div {
+  width: 100%;
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-height: 400px;
+}
+
+.search-forms {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 15px 3px 15px;
+  display: inline-block;
+  background: #efefef;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#create-gif-header {
+  font-family: Abel;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.navbar {
+  background: #ccc;
+}
+
+nav {
+  margin-bottom: 25px;
+}
+
+#create-button:hover {
+  background: #efefef;
 }
 
 #meme-generator {
@@ -99,4 +87,10 @@ body {
 
 #img-val {
   display: none;
+}
+
+#logo {
+  font-family: 'Monoton', cursive;
+  font-size: 50px;
+  margin-left: 20px
 }

@@ -6,7 +6,7 @@ module.exports = function(app) {
       imageurl: req.body.imageurl,
       caption: req.body.caption
     }).then(function() {
-      res.redirect("/");
+      res.json("/");
     });
   });
 
