@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "1111",
     "database": "memesdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "root",
+    "password": "1111",
     "database": "memesdb",
     "host": "localhost",
     "dialect": "mysql",
@@ -16,7 +16,7 @@
   },
   "production": {
     "username": "root",
-    "password": "root",
+    "password": "1111",
     "database": "memesdb",
     "host": "127.0.0.1",
     "dialect": "mysql"

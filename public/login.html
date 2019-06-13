@@ -10,7 +10,7 @@
 <body>
   <div class="topnav">
     <div class="topnav-centered">
-      <a href="localhost:3000/generatememe" class="active">Generate Meme</a>
+      <a href="localhost:3000/" id="generatememe"  class="active">Generate Meme</a>
     </div>
     <div class="topnav-right">
       <a href="http://localhost:3000/login">Login</a>
@@ -18,12 +18,12 @@
     </div>
   </div>
 
-  <form action="action_page.php"style="border:1px solid gold)">
+  <form class="login" action="action_page.php" style="border:1px solid gold">
     <div class="container">
-      <label for="uname" id="names"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="uname" id="email-input"><b>Username</b></label>
+      <input type="email" placeholder="Enter Username (Email)" name="email" required>
 
-      <label for="psw" id="names"><b>Password</b></label>
+      <label for="psw" id="password-input"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
       <button type="submit" id="loginstyle">Login</button>
@@ -35,7 +35,8 @@
   </form>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/public/js/login.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
+
 </body>
 
 </html>
