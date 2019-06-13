@@ -94,3 +94,7 @@ body {
   text-align: center;
   margin: 5px;
 }
+
+#img-val {
+  display: none;
+}
