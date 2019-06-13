@@ -5,7 +5,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
 
-    db.Meme.findAll({}).then(function(data) {
+    db.Memes.findAll({}).then(function(data) {
       res.render("index", {
         memes: data
       });
@@ -29,14 +29,6 @@ module.exports = function(app) {
         });
         res.render("form", { results: gifs });
       });
-  });
-
-  app.get("/", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.render("login");
   });
 
   app.get("*", function(req, res) {

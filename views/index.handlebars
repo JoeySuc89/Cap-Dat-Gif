@@ -6,10 +6,15 @@
       <div class='meme-divs'>
         <img class='meme-gifs' src={{imageurl}}>
         <p class='meme-captions'>{{caption}}</p>
-          {{!-- <div class="upvote" data-id = "1">
-            <form
-          <i class="fas fa-arrow-up"></i></div> --}}
+
+          <div class="upvote-div">
+            <form id="upvote-form" method="POST" action="/api/upvote/{{id}}">
+          <button type="submit">👍</button>
+          </form>
+          <p class="upvotes">{{likes}}</p>
           </div>
+          </div>
+
     {{/each}}
   </div>
 </div>
