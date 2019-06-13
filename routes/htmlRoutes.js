@@ -78,7 +78,15 @@ module.exports = function(app) {
         res.render("form", { results: gifs });
       });
   });
-
+  app.get("/meme/:memeId", function(req,res){
+    db.Meme.findOne({id:req.params.memeId}).then(function(data) {
+      console.log("FindOne function hit");
+      console.log(data);
+      res.render("meme", {
+        meme: data
+      });
+    });
+  })
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
