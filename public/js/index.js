@@ -3,7 +3,7 @@ var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
-
+var $generatememe = $("#generatememe");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -124,3 +124,7 @@ $(".downvote").on("click", function(){
   var memeId = $(this).attr("data-id");
   API.Memedislike(memeId);
 })
+
+$generatememe.on("click", function(req, res){
+  res.redirect("/login")
+});

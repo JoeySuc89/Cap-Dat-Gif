@@ -8,8 +8,8 @@ $(document).ready(function() {
   loginForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
-      email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      email: emailInput.val(),
+      password: passwordInput.val()
     };
 
     if (!userData.email || !userData.password) {
