@@ -13,6 +13,11 @@ body {
   color: black;
 }
 
+.upvote-div {
+  display: inline;
+  text-align: center;
+}
+
 #create-button {
   font-size: 40px;
   font-weight:bold;
@@ -93,4 +98,14 @@ nav {
   font-family: 'Monoton', cursive;
   font-size: 50px;
   margin-left: 20px
+}
+
+.upvotes {
+  color: black;
+  font-weight: bold;
+  display: inline;
+}
+
+#upvote-form {
+  display: inline;
 }
