@@ -25,14 +25,8 @@ $("#create-meme").on("click", function() {
       caption: createMemeText
     },
     success: function(data) {
-      console.log(data);
+      window.location.replace(data);
 
-        console.log("success");
-        console.log(data.memeId);
-        location.replace("/meme/" + data.memeId)
-    
-
-      // location.reload();
       // return data;
     }
   });

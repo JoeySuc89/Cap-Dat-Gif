@@ -1,11 +1,15 @@
 <div class='container' id='meme-generator'>
+    <div class='row'>
 <div class='col-sm-12'>
-  <h2>Meme Generator</h2>
-<form id='search-form'>
-  <input type='text' id='gfycat-search' name='gfycat-search' placeholder='Search gfycat' >
-  <button id="gfycat-search-btn" class='btn btn-submit'>Search</button>
+  <p id="create-gif-header">add a new gif</p>
+  </div>
+  </div>
 
   <div id='gfycat-div'>
+    <form id='search-form' class="search-forms">
+  <input type='text' id='gfycat-search' name='gfycat-search' placeholder='Search gfycat' >
+  <button id="gfycat-search-btn" class='btn btn-submit'>Search</button>
+  </form>
 
 <div class="container">
   <div class="row">
@@ -25,11 +29,13 @@
   </div>
 </div>
   </div>
-  <form action="/api/meme" method="POST" id='meme-form'>
+
+    <form action="/api/meme" method="POST" id='meme-form' class="search-forms">
     <input id="img-val" name='imageurl' />
     <input type='text' name='caption' id = "create" placeholder='Caption' />
-    <input id='create-meme' type='submit' />
+    <input id='create-meme' type='submit' class='btn btn-submit' />
   </form>
+
 </div>
 </div>
 </div>
