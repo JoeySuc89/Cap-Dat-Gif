@@ -2,20 +2,10 @@
 <html>
 
 <head>
-<<<<<<< HEAD
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/login.css" media="screen" title="no title" charset="utf-8">
   <title>Login Page</title>
-=======
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
->>>>>>> 7eef201f8691ebc840cd01fc524c817325c9fdad
 </head>
 <body>
   <div class="topnav">
@@ -28,15 +18,15 @@
     </div>
   </div>
 
-  <form action="action_page.php"style="border:1px solid rgba(0, 215, 253, 0.486)">
+  <form action="action_page.php"style="border:1px solid gold)">
     <div class="container">
-      <label for="uname"><b>Username</b></label>
+      <label for="uname" id="names"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
+      <label for="psw" id="names"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit">Login</button>
+      <button type="submit" id="loginstyle">Login</button>
       <a href="http://localhost:3000/register" class="buttonregister">Register</a>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
