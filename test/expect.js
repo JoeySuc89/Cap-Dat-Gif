@@ -6,12 +6,8 @@ var db = require("../models");
 var expect = chai.expect;
 var describe = mocha.describe;
 var beforeEach = mocha.beforeEach;
-<<<<<<< HEAD
 var it = mocha.it;
 
-=======
-var describe = require("mocha").describe;
->>>>>>> 06ed4aa341e98a729b3c4257ed62e44ba33eb23c
 // Setting up the chai http plugin
 chai.use(chaiHttp);
 var request;
