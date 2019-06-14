@@ -3,6 +3,9 @@ var chaiHttp = require("chai-http");
 var server = require("../server");
 var db = require("../models");
 var expect = chai.expect;
+var describe = mocha.describe;
+var beforeEach = mocha.beforeEach;
+var describe = require("mocha").describe;
 // Setting up the chai http plugin
 chai.use(chaiHttp);
 var request;
