@@ -21,7 +21,8 @@ module.exports = function(app) {
   app.get("/memes/:search", function(req, res) {
     axios
       .get(
-        "https://api.gfycat.com/v1/gfycats/search?search_text=" + req.params.search
+        "https://api.gfycat.com/v1/gfycats/search?search_text=" +
+          req.params.search
       )
       .then(function(response) {
         var gifs = response.data.gfycats.map(function(gfycat) {
