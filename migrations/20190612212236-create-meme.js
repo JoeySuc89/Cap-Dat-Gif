@@ -1,7 +1,12 @@
-'use strict';
+"use strict";
 module.exports = {
+<<<<<<< HEAD
   up: function (queryInterface, Sequelize) {
     return queryInterface.createTable('Memes', {
+=======
+  up: function(queryInterface, Sequelize) {
+    return queryInterface.createTable("Memes", {
+>>>>>>> 06ed4aa341e98a729b3c4257ed62e44ba33eb23c
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -24,7 +29,11 @@ module.exports = {
       }
     });
   },
+<<<<<<< HEAD
   down: function(queryInterface, Sequelize) {
+=======
+  down: function(queryInterface) {
+>>>>>>> 06ed4aa341e98a729b3c4257ed62e44ba33eb23c
     return queryInterface.dropTable("Memes");
   }
 };
