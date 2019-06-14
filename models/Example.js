@@ -1,9 +1,13 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const Example = sequelize.define('Example', {
-    text: DataTypes.STRING
-  }, {});
-  Example.associate = function(models) {
+"use strict";
+module.exports = function(sequelize, DataTypes) {
+  var Example = sequelize.define(
+    "Example",
+    {
+      text: DataTypes.STRING
+    },
+    {}
+  );
+  Example.associate = function() {
     // associations can be defined here
   };
   return Example;
