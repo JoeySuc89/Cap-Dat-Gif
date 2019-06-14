@@ -1,6 +1,12 @@
 models/index.js
 node_modules
-20190607005033-create-memes.js
 Meme.js
 models/index.js
 public/js/index.js
+migrations/20190612212236-create-meme.js
+migrations/20190613200639-create-memes.js
+migrations/20190612002126-create-example.js
+models/Example.js
+models/Memes.js
+seeders/20190613200845-Memes.js
+migrations/20190614210748-create-example.js
