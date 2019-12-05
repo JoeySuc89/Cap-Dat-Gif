@@ -20,13 +20,13 @@ body {
 
 #create-button {
   font-size: 40px;
-  font-weight:bold;
+  font-weight: bold;
   color: purple;
   background: lightpink;
   padding: 8px 20px 8px 20px;
   border: black solid 1px;
   border-radius: 10px;
-  font-family: "Monoton";
+  font-family: 'Monoton';
   text-decoration: none;
   margin-right: 25px;
 }
@@ -97,7 +97,7 @@ nav {
 #logo {
   font-family: 'Monoton', cursive;
   font-size: 50px;
-  margin-left: 20px
+  margin-left: 20px;
 }
 
 .upvotes {
@@ -108,4 +108,13 @@ nav {
 
 #upvote-form {
   display: inline;
+}
+
+@media screen and (max-width: 578px) {
+  #create-gif-header {
+    font-size: 40px;
+  }
+  #navbar {
+    text-align: center;
+  }
 }
